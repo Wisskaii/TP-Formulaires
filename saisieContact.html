@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanaya</title>
+</head>
+<body>
+
+    <h1>Formulaire de contact</h1>
+
+    <form action="recapituler.php" method="POST">
+        
+    <label>Civilité :</label><br>
+    <input type="radio" id="civilite_m" name="civilite" value="M." required>
+    <label for="civilite_m">M.</label><br>
+    <input type="radio" id="civilite_mme" name="civilite" value="Mme" required>
+    <label for="civilite_mme">Mme</label><br>
+    <input type="radio" id="civilite_mlle" name="civilite" value="Mlle" required>
+    <label for="civilite_mlle">Mlle</label><br><br>
+
+    <label for="nom">Nom :</label><br>
+    <input type="text" id="nom" name="nom" required><br><br>
+
+    <label for="prenom">Prénom :</label><br>
+    <input type="text" id="prenom" name="prenom" required><br><br>
+
+    <label for="telephone">Numéro de téléphone :</label><br>
+    <input type="tel" id="telephone" name="telephone" required><br><br>
+
+    <label for="email">Adresse électronique :</label><br>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="raison">Raison de la prise de contact :</label><br>
+    <select id="raison" name="raison">
+        <option value="Renseignement">Renseignement</option>
+        <option value="Réclamation">Réclamation</option>
+        <option value="Commande">Commande</option>
+    </select><br><br>
+
+    <label for="reponse">Mode(s) de réponse :</label><br>
+    <input type="checkbox" id="email" name="reponse[]" value="email">
+    <label for="email">Email</label><br>
+    <input type="checkbox" id="sms" name="reponse[]" value="sms">
+    <label for="sms">SMS</label><br>
+    <input type="checkbox" id="telephone" name="reponse[]" value="telephone">
+    <label for="telephone">Téléphone</label><br><br>
+
+    <label for="date_telephone">Date pour un rappel téléphonique :</label><br>
+    <input type="datetime-local" id="date_telephone" name="date_telephone"><br><br>
+
+    <label for="message">Message complémentaire :</label><br>
+    <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
+
+    <input type="submit" value="Envoyer">
+    </form>
+
+</body>
+</html>
